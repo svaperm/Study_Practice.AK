@@ -70,7 +70,7 @@ namespace Антиконтрафакт2._1.Controllers
         public ActionResult SendForm(string SPName, string SPAddress, string SPINN, string SPReason, string PName, string PBar, string PReason)
         {
             forminfo = new List<string>();
-            if (SPName != ""&&SPAddress!=""&&SPINN!=""&&SPReason!="")
+            if ((SPName != ""&&SPAddress!=""&&SPINN!=""&&SPReason!="")&&(SPName != null && SPAddress != null && SPINN != null && SPReason != null))
             {
                 forminfo.Add(SPName);forminfo.Add(SPAddress);forminfo.Add(SPINN);forminfo.Add(SPReason);
                 Request r = new Request();
@@ -95,7 +95,7 @@ namespace Антиконтрафакт2._1.Controllers
                 Message = "Заявка была успешно отправлено.";
                 return RedirectToAction("UserMessage");
             }
-             if (PName!=""&&PBar!=""&&PReason!="")
+             else if ((PName!=""&&PBar!=""&&PReason!="")&& (PName != null && PBar != null && PReason != null))
             {
                 forminfo.Add(PName); forminfo.Add(PBar); forminfo.Add(PReason);
                 Request r = new Request();
