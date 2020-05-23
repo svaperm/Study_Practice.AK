@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Проверка</title>
+    <link href="@Url.Content("~/Content/SiteCSS.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <div class="overlay"></div>
+        <div class="website_name">
+            <a href="@Url.Action("Index", "Home")">АнтиКонтрафакт</a>
+        </div>
+        <div class="QMark"><a href="@Url.Action("Info", "Home")"><img src="@Url.Content("~/Images/Home_qmark.png")" width="49" height="51" /></a></div>
+    </div>
+    <div class="content7">
+        <div class="velchecktitlecont"><div class="valchecktitle"><p align="center"><b>Введите полученный код</b></p></div></div>
+        <div class="codeform">
+            @using (Html.BeginForm())
+            {
+                <input class="valcodefield" type="text" name="VerCode" placeholder="Введите код" />
+                <input class="sendcode" type="submit" value="Отправить" />
+            }
+        </div>
+    </div>
+    <div class="footer">
+        <div class="author_label">
+            <div class="authors">Дорышин М.О., Малкова С.А., Лебедева А.И.</div>
+        </div>
+    </div>
+</body>
+</html>

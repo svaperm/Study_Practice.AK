@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Проверка</title>
+    <link href="@Url.Content("~/Content/SiteCSS.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <div class="overlay"></div>
+        <div class="website_name">
+            <a href="@Url.Action("Index", "Home")">АнтиКонтрафакт</a>
+        </div>
+        <div class="menu">
+            <div class="emptyblock"><p align="center">Проверить товар по штрихкоду</p></div>
+            <div class="block"><p align="center">Подать заявление о контрафакте</p></div>
+            <div class="emptyblock"><p align="center">Проверить торговую точку по ИНН</p></div>
+            <div class="emptyblock"><p align="center">Поиск торговой точки</p></div>
+        </div>
+        <div class="QMark"><a href="@Url.Action("Info", "Home")"><img src="@Url.Content("~/Images/Home_qmark.png")" width="49" height="51" /></a></div>
+    </div>
+    <div class="content5">
+        <div class="valtitle"><p align="center">Для подачи заявления необходимо ввести следующие <b>контактные данные</b></p></div>
+        <div class="valmeth">
+            @using (Html.BeginForm())
+            {
+            <input class="valfield" type="text" name="Emailad" placeholder="Email"/>
+                <input class="chooseval" type="submit" value="Готово" />
+            }
+        </div>
+        <div class="valbotmes"><p align="center">После нажатия кнопки <b>ГОТОВО</b> вам будет отправлен код</p></div>
+    </div>
+    <div class="footer">
+        <div class="author_label">
+            <div class="authors">Дорышин М.О., Малкова С.А., Лебедева А.И.</div>
+        </div>
+    </div>
+</body>
+</html>

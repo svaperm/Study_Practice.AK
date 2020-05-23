@@ -1,0 +1,38 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Найти торговую точку</title>
+    <link href="@Url.Content("~/Content/SiteCSS.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <div class="overlay"></div>
+        <div class="website_name">
+            <a href="@Url.Action("Index","Home")">АнтиКонтрафакт</a>
+        </div>
+        <div class="menu">
+            <div class="emptyblock"><p align="center">Проверить товар по штрихкоду</p></div>
+            <div class="emptyblock"><p align="center">Подать заявление о контрафакте</p></div>
+            <div class="emptyblock"><p align="center">Проверить торговую точку по ИНН</p></div>
+            <div class="block"><p align="center">Поиск торговой точки</p></div>
+        </div>
+        <div class="QMark"><a href="@Url.Action("Info","Home")"><img src="@Url.Content("~/Images/Home_qmark.png")" width="49" height="51" /></a></div>
+    </div>
+    <div class="content6">
+        <div class="map">
+            <iframe class="actmap" src="https://yandex.ru/map-widget/v1/?um=constructor%3A0d0819b9706f226493df296facdd397fb90cce2a311b96e76ad64b05255fa046&amp;source=constructor" width="900" height="600" frameborder="0"></iframe>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="author_label">
+            <div class="authors">Дорышин М.О., Малкова С.А., Лебедева А.И.</div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,60 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Главная</title>
+    <link href="@Url.Content("~/Content/SiteCSS.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="bodywrapper">
+        <div class="header">
+            <div class="overlay"></div>
+            <div class="website_name">
+                <a href="@Url.Action("Index","Home")">АнтиКонтрафакт</a>
+            </div>
+            <div class="menu">
+                <div class="block"><a href="@Url.Action("Barcode_LookUp","Home")"><p align="center">Проверить товар по штрихкоду</p></a></div>
+                <div class="block"><a href="@Url.Action("Validation","Home")"><p align="center">Подать заявление о контрафакте</p></a></div>
+                <div class="block"><a href="@Url.Action("CheckSeller","Home")"><p align="center">Проверить торговую точку по ИНН</p></a></div>
+                <div class="block"><a href="@Url.Action("FindSeller","Home")"><p align="center">Поиск торговой точки</p></a></div>
+            </div>
+            <div class="QMark"><a href="@Url.Action("Info","Home")"><img src="@Url.Content("~/Images/Home_qmark.png")" width="49" height="51" /></a></div>
+        </div>
+            <div class="content1">
+                <div class="main_text">
+                    <p align="center">
+                        Сайт предоставляет возможность потребителям проверять в онлайн режиме легальность реализуемой продукции, оперативно извещать службы о незаконности продажи продукции или работы торговых точек
+                    </p>
+                </div>
+                <div class="actionblock">
+                    <div class="action">
+                        <a href="@Url.Action("Barcode_LookUp","Home")"><img class="imagething" src="@Url.Content("~/Images/Home_barcode.png")" width="294" height="289" /></a>
+                        <div class="Link_text_container"><p align="center">Проверить товар по штрихкоду</p></div>
+                    </div>
+                    <div class="action">
+                        <a href="@Url.Action("Validation","Home")"><img class="imagething" src="@Url.Content("~/Images/Home_shield.jpg")" width="294" height="289" /></a>
+                        <div class="Link_text_container"><p align="center">Подать заявление о контрафакте</p></div>
+                    </div>
+                    <div class="action">
+                        <a href="@Url.Action("CheckSeller","Home")"><img class="imagething" src="@Url.Content("~/Images/Home_shop.jpg")" width="294" height="289" /></a>
+                        <div class="Link_text_container"><p align="center">Проверить торговую точку по ИНН</p></div>
+                    </div>
+                    <div class="action">
+                        <a href="@Url.Action("FindSeller","Home")"><img class="imagething" src="@Url.Content("~/Images/Home_location.jpg")" width="294" height="289" /></a>
+                        <div class="Link_text_container"><p align="center">Поиск торговой точки</p></div>
+                    </div>
+                </div>
+            </div>
+        <div class="footer">
+            <div class="author_label">
+                <div class="authors">Дорышин М.О., Малкова С.А., Лебедева А.И.</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

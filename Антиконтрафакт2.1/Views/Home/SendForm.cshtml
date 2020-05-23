@@ -1,0 +1,64 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Отправка заявления на контрафакт</title>
+    <link href="@Url.Content("~/Content/SiteCSS.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <div class="overlay"></div>
+        <div class="website_name">
+            <a href="@Url.Action("Index", "Home")">АнтиКонтрафакт</a>
+        </div>
+        <div class="menu">
+            <div class="emptyblock"><p align="center">Проверить товар по штрихкоду</p></div>
+            <div class="block"><p align="center">Подать заявление о контрафакте</p></div>
+            <div class="emptyblock"><p align="center">Проверить торговую точку по ИНН</p></div>
+            <div class="emptyblock"><p align="center">Поиск торговой точки</p></div>
+        </div>
+        <div class="QMark"><a href="@Url.Action("Info", "Home")"><img src="@Url.Content("~/Images/Home_qmark.png")" width="49" height="51" /></a></div>
+    </div>
+    <div class="content4">
+        <div class="form">
+            <div class="formtitle"><p align="center">Если вы хотите подать жалобу на <b>ТОРГОВУЮ ТОЧКУ</b>, введите следующие данные:</p></div>
+            <div class="SalepointF">
+                <div class="fieldcontainer">
+                    @using (Html.BeginForm())
+                    {
+                    <input class="SPfield" type="text" name="SPName" placeholder="Название торговой точки" />
+                    <input class="SPfield" type="text" name="SPAddress" placeholder="Адрес торговой точки" />
+                    <input class="SPfield" type="text" name="SPINN" placeholder="ИНН торговой точки" />
+                    <input class="SPbfield" type="text" name="SPReason" placeholder="Причина, по которой точка может быть признана нелегальной" />
+                    <input class="FormSubb" type="submit" value="Отправить жалобу" />
+                    }
+                </div>
+                </div>
+            </div>
+        <div class="form">
+            <div class="formtitle"><p align="center">Если вы хотите подать жалобу на <b>ТОВАР</b>, введите следующие данные:</p></div>
+            <div class="SalepointF">
+                <div class="fieldcontainer1">
+                    @using (Html.BeginForm())
+                    {
+                <input class="SPfield" type="text" name="PName" placeholder="Наименование продукта" />
+                    <input class="SPfield" type="text" name="PBar" placeholder="Штрихкод" />
+                    <input class="Pbfield" type="text" name="PReason" placeholder="Причина, по которой продукция может быть признана нелегальной" />
+                    <input class="FormSubb" type="submit" value="Отправить жалобу" />
+                    }
+                </div>
+            </div>
+        </div>
+     </div>
+    <div class="footer">
+        <div class="author_label">
+            <div class="authors">Дорышин М.О., Малкова С.А., Лебедева А.И.</div>
+        </div>
+    </div>
+</body>
+</html>

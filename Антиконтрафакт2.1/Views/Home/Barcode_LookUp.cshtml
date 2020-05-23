@@ -1,0 +1,37 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Проверка штрихкода</title>
+    <link href="@Url.Content("~/Content/SiteCSS.css")" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="header">
+        <div class="overlay"></div>
+        <div class="website_name">
+            <a href="@Url.Action("Index","Home")">АнтиКонтрафакт</a>
+        </div>
+        <div class="menu">
+            <div class="block"><p align="center">Проверить товар по штрихкоду</p></div>
+            <div class="emptyblock"><p align="center">Подать заявление о контрафакте</p></div>
+            <div class="emptyblock"><p align="center">Проверить торговую точку по ИНН</p></div>
+            <div class="emptyblock"><p align="center">Поиск торговой точки</p></div>
+        </div>
+        <div class="QMark"><a href="@Url.Action("Info","Home")"><img src="@Url.Content("~/Images/Home_qmark.png")" width="49" height="51" /></a></div>
+    </div>
+    <div class="content9">
+        <div class="barcodetitle"><p align="center">Проверка продукта по штрихкоду</p></div>
+        <div class="barform"><iframe class="floatframe" src="//service-online.su/text/shtrih-kod/cod.php" scrolling="no" height="450" width="700" frameborder="0" marginheight="0" marginwidth="0"></iframe></div>
+    </div>
+    <div class="footer">
+        <div class="author_label">
+            <div class="authors">Дорышин М.О., Малкова С.А., Лебедева А.И.</div>
+        </div>
+    </div>
+</body>
+</html>
